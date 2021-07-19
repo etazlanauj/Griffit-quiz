@@ -1,5 +1,5 @@
 import logo from './img/custom-culinary-logo.svg';
-import './header.scss';
+
 
 function Header() {
   return (
@@ -7,7 +7,7 @@ function Header() {
       <header className="header">
         <div className="header__brand">
           <a href="http://customculinary.co">
-            <img src={logo} alt="custom-culinary-logo" width="150" class="custom__culinay-logo" />
+            <img src={logo} alt="custom-culinary-logo" width="150" className="custom__culinay-logo" />
           </a>
         </div>
         <div className="header__text">

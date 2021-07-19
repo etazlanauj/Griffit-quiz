@@ -1,7 +1,6 @@
 
 import Header from './header.js';
-import './App.css';
-import './header.scss'
+import './scss/main.scss';
 import Slide1 from './slide-1.js';
 
 function App() {
