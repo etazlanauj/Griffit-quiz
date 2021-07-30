@@ -1,0 +1,35 @@
+body {
+  background-color: #eff2fd;
+  background-image: url("../img/bg.jpg");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.7em 0;
+  border-bottom: solid 1px #E66D2F;
+}
+.header__text {
+  color: #E66D2F;
+}
+
+@media (max-width: 415px) {
+  .header {
+    padding: 1em;
+  }
+  .header__text {
+    text-align: right;
+    padding: 0 0 0 2em;
+  }
+  .header__brand img {
+    width: 120px;
+  }
+}

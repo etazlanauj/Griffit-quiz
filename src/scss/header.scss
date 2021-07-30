@@ -1,11 +1,4 @@
-$primary-color: #E66D2F;
-$primary-color-light: rgba(206, 131, 84, 0.1);
-$primary-color-light-dark: rgba(255, 184, 139, 1);
-$secundary-color: #474848;
-$bg-color: #eff2fd;
-$bg-color-2: #F4F1F2;
-$titles: 30px;
-$parragraf: 18px;
+@import './varibles.scss';
 
 body {
 background-color: $bg-color;
@@ -20,12 +13,27 @@ background-image: url('../img/bg.jpg');
 }
   
 .header{
-    display: flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
   padding: .7em 0;
   border-bottom: solid 1px $primary-color;
   &__text{
       color: $primary-color;
+  }
+}
+
+@media (max-width: 415px){
+  .header{
+    padding: 1em;
+    &__text{
+      text-align: right;
+      padding: 0 0 0 2em;
+    }
+    &__brand{
+      img{
+        width: 120px;
+      }
+    }
   }
 }

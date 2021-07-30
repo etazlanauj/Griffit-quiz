@@ -1,9 +1,15 @@
+@import './varibles.scss';
+
 .slide{
-    height: 70vh;
     display: grid;
     grid-template-areas: "title form" 
                          "img img";
     padding: 5em;
+    grid-gap: 1em;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
     &__title{
         .divisor{
             height: 100%;
@@ -37,6 +43,7 @@
             padding: 1em;
             background-color: $bg-color-2;
             border-radius: 25px;
+            padding-left: 2em;
             label{
                 line-height: 2em;
                 color: $secundary-color;
@@ -64,4 +71,45 @@
     right: 30px;
     bottom: -20px;
     border-radius: 0 0 5px 5px;
+}
+
+input[type='radio'] {
+    position: absolute;
+    margin-top: 7px !important;
+    left: 15px;
+}
+
+@media (max-width: 650px){
+    .slide{
+        padding: 1em;
+        &__title{ 
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-size: 1.2em;
+            text-align: center;
+            margin: 0 auto;
+            .divisor{
+                display: none;
+            }
+        }
+        &__form{
+            margin: 1em 0;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        &__img{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            height: 300px;
+            margin: 0 auto;
+        }
+    }
+   .slide__form-wrappet-inputs label{
+        font-size: .8em;
+    }
+    
 }
